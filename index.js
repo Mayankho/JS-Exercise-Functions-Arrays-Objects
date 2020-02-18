@@ -46,7 +46,6 @@ function makePersonObject(idData, nameData, emailData) {
     "name": nameData, 
     "email": emailData
   })
-  
 }
 
 /**
@@ -62,9 +61,20 @@ function makePersonObject(idData, nameData, emailData) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+
+function getName({id, name, email}) {
+
+  let data ={
+    id, 
+    name, 
+    email
+  } 
+  return `Hello my name is ${data.name}`
 }
+
+
+
+
 
 /**
  * ### Challenge `makeSmartPerson`
@@ -79,8 +89,14 @@ function getName(/* code here */) {
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(/* code here */) {
-  /* code here */
+function makeSmartPerson(name) {
+  
+  smartFormula = {
+    data:name, 
+    sum: function(x, y){
+      return x + y;
+    }
+  }
 }
 
 
