@@ -91,16 +91,22 @@ function getName({id, name, email}) {
 */
 function makeSmartPerson(name) {
   
-  smartFormula = {
-    data:name, 
+let  smartFormula = {
+    name:name, 
     sum: function(x, y){
       return x + y;
+    },
+    speak: function speak(){
+      return `Hello, my nane is ${name}`
     }
+     
+  
+    // If this doesn't work, then find a way to invoke th function without having  to  los 
+    // Speak.
   }
+  return smartFormula;
 }
-
-
-
+// If this doesn't work then i  don't know what to  do.
 /*
 // ⭐️ Example Test Data ⭐️
 
@@ -156,7 +162,16 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
+
+ // I need to get all the data inside of inventory,
+ // Then i  need to connnect the index in my  parameters to
+ // The id of the car that they want in the inventory
+ //Then I need to extract the car Make and the car Model
+ //Then i need to make a string with the car make and model
+
+  return `This is a ${inventory[index].car_make} ${inventory[index].car_model}`;
+
+
 }
 
 /**
@@ -170,8 +185,11 @@ function getCarInfoByIndex(inventory, index) {
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo(/* code here */) {
-  /* code here */
+function getLastCarInfo(inventory) {
+
+  return ` This is a ${inventory.car_make} ${inventory.car_model} `;
+    
+
 }
 
 /**
