@@ -162,15 +162,7 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-
- // I need to get all the data inside of inventory,
- // Then i  need to connnect the index in my  parameters to
- // The id of the car that they want in the inventory
- //Then I need to extract the car Make and the car Model
- //Then i need to make a string with the car make and model
-
   return `This is a ${inventory[index].car_make} ${inventory[index].car_model}`;
-
 
 }
 
@@ -186,11 +178,10 @@ function getCarInfoByIndex(inventory, index) {
  * it will return `This is a Lincoln Town Car`.
 */
 function getLastCarInfo(inventory) {
-
-  return ` This is a ${inventory.car_make} ${inventory.car_model} `;
-    
-
+  let lastCar = inventory[inventory.length-1];
+  return ` This is a ${lastCar.car_make} ${lastCar.car_model}`;
 }
+
 
 /**
  * ### Challenge `getCarInfoById`
@@ -204,9 +195,15 @@ function getLastCarInfo(inventory) {
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoById(/* code here */) {
-  /* code here */
+function getCarInfoById(inventory, id) {
+
+  let car = inventory[id - 1];
+  return `This is a ${car.car_make} ${car.car_model}`;
+  
+
+
 }
+
 
 /**
  * ### Challenge `sortCarInventory`
