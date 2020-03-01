@@ -199,6 +199,7 @@ function getCarInfoById(inventory, id) {
 
   let car = inventory[id - 1];
   return `This is a ${car.car_make} ${car.car_model}`;
+  //This should do the trick unless the array can not be manipulated like that
   
 
 
@@ -213,8 +214,16 @@ function getCarInfoById(inventory, id) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
-function sortCarInventory(/* code here */) {
-  /* code here */
+function sortCarInventory(inventory) {
+
+  let sortedInventory = inventory.sort((id,model ) => {
+    let id = inventory.id;
+    let model = inventory.car_model;
+  });
+
+
+
+  console.log(sortedInventory);
 }
 
 /**
